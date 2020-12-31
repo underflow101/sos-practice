@@ -1,7 +1,7 @@
 '''
 middleware/sosMastersURI.py
 
-- Last button activity
+- First button activity
 - Send user to SOS Masters / Mine / Companions' homepage
 '''
 
@@ -17,9 +17,9 @@ from configs.configuration import mainUI
 class SosMasterApp(QDialog):
     def __init__(self, parent):
         super(SosMasterApp, self).__init__(parent)
-        self.initWindow()
+        self.initUI()
     
-    def initWindow(self):
+    def initUI(self):
         self.config = mainUI()
         
         height = self.config.btnHeight

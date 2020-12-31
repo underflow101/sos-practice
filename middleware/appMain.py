@@ -1,14 +1,10 @@
 import sys, os
-from random import randint
-from PyQt5.QtWidgets import QApplication, QMessageBox, QInputDialog, QLineEdit, QWidget, QPushButton, QDesktopWidget, QLabel
-from PyQt5.QtWidgets import QMainWindow, QGridLayout, QComboBox
+from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import QCoreApplication
-import webbrowser
 
 from configs.configuration import mainUI
-from middleware import getOS
-from middleware import sosMastersURI
+from middleware import getOS, gitOperation, sosMastersURI
 
 class sosTutorialApp(QWidget):
     def __init__(self):
@@ -38,6 +34,15 @@ class sosTutorialApp(QWidget):
         self.btnLink.setMaximumWidth(btnWidth)
         self.btnLink.clicked.connect(self.linkHandler)
         
+        # Button 1: Basic git operations
+        self.btnGitOp = QPushButton(self)
+        self.btnGitOp.setText('&Basic Git')
+        self.btnGitOp.setToolTip('Learn basic git operations')
+        self.btnGitOp.setMaximumHeight(btnHeight)
+        self.btnGitOp.setMaximumWidth(btnWidth)
+        self.btnGitOp.clicked.connect(self.gitOpHandler)
+        
+        
         # QUIT button
         btnQuit = QPushButton(self)
         btnQuit.setText('&Exit the Program')
@@ -52,16 +57,20 @@ class sosTutorialApp(QWidget):
         grid.addWidget(self.runningOS, 0, 1)
         grid.addWidget(QLabel(self.tr("Link to Pages")), 2, 0)
         grid.addWidget(self.btnLink, 2, 1)
-        
+        grid.addWidget(QLabel(self.tr("Basic Git Operations")), 3, 0)
+        grid.addWidget(self.btnGitOp, 3, 1)
         grid.addWidget(QLabel(self.tr("프로그램을 종료합니다.")), 4, 0)
         grid.addWidget(btnQuit, 4, 1)
         
         self.setWindowTitle("SOS Masters Practice")
         self.setWindowIcon(QIcon('dice.png'))
-        self.resize(300, 300)
+        self.resize(self.config.mainUIWidth, self.config.mainUIHeight)
         self.center()
         self.setLayout(grid)
         self.show()
         
     def linkHandler(self):
         sosMastersURI.SosMasterApp(self)
+        
+    def gitOpHandler(self):
+        gitOperation.GitTutorialApp(self, self.runningOS.currentText())
