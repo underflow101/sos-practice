@@ -4,7 +4,7 @@ from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import QCoreApplication
 
 from configs.configuration import mainUI
-from middleware import getOS, gitOperation, sosMastersURI
+from middleware import getOS, gitOperation, sosMastersURI, findIssue
 
 class sosTutorialApp(QWidget):
     def __init__(self):
@@ -42,6 +42,13 @@ class sosTutorialApp(QWidget):
         self.btnGitOp.setMaximumWidth(btnWidth)
         self.btnGitOp.clicked.connect(self.gitOpHandler)
         
+        # Button 2: Good First Issue
+        self.btnFirstIssue = QPushButton(self)
+        self.btnFirstIssue.setText('&How to Find Issue')
+        self.btnFirstIssue.setToolTip('Learn how to find first issue to solve and contribute')
+        self.btnFirstIssue.setMaximumHeight(btnHeight)
+        self.btnFirstIssue.setMaximumWidth(btnWidth)
+        self.btnFirstIssue.clicked.connect(self.firstIssueHandler)
         
         # QUIT button
         btnQuit = QPushButton(self)
@@ -59,8 +66,10 @@ class sosTutorialApp(QWidget):
         grid.addWidget(self.btnLink, 2, 1)
         grid.addWidget(QLabel(self.tr("Basic Git Operations")), 3, 0)
         grid.addWidget(self.btnGitOp, 3, 1)
-        grid.addWidget(QLabel(self.tr("프로그램을 종료합니다.")), 4, 0)
-        grid.addWidget(btnQuit, 4, 1)
+        grid.addWidget(QLabel(self.tr("How to Find Issue")), 4, 0)
+        grid.addWidget(self.btnFirstIssue, 4, 1)
+        grid.addWidget(QLabel(self.tr("프로그램을 종료합니다.")), 5, 0)
+        grid.addWidget(btnQuit, 5, 1)
         
         self.setWindowTitle("SOS Masters Practice")
         self.setWindowIcon(QIcon('dice.png'))
@@ -74,3 +83,6 @@ class sosTutorialApp(QWidget):
         
     def gitOpHandler(self):
         gitOperation.GitTutorialApp(self, self.runningOS.currentText())
+        
+    def firstIssueHandler(self):
+        findIssue.FindIssueApp(self, self.runningOS.currentText())

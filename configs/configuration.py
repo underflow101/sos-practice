@@ -47,6 +47,23 @@ class gitOps:
     
     def __init__(self):
         super().__init__()
+
+class findingIssue:
+    introduction = """It is truly hard to find a new issue,<br>
+    especially when you are a new starter in open source.<br><br>
+    Sometimes issues you see in <b><a href="https://github.com/underflow101/sos-practice/issues">issue board</a></b> are too complicated,<br>
+    or too hard to solve with your capability.<br><br>
+    Then how will you find a good issue to solve, and contribute for open source community?"""
+    
+    goodFirstIssueInfo = """It is this simple:<br><br>
+    1. Go to <b><a href="https://github.com/underflow101/sos-practice/labels/good%20first%20issue">good first issue</a></b><br>
+    2. Find issues with <b>good first issue</b> label on it.<br>
+    3. Leave a comment that you will solve that issue, and just go for it!<br><br>
+    - Remember that <b>good first issues</b> are for beginners or newcomers of that repository.<br>
+    - This will be a good guideline for anyone to start certain open source."""
+    
+    def __init__(self):
+        super().__init__()
         
 class strings:
     gitOp = gitOps()
@@ -55,7 +72,13 @@ class strings:
                   gitOp.gitCliWindows],
                   gitOp.gitCmdAdd,
                  'test2',
-                 'test3']
+                 'test3',
+                 ]
+    
+    issueFinder = findingIssue()
+    goodFirstIssue = [issueFinder.introduction,
+                      issueFinder.goodFirstIssueInfo,
+                      ]
     
     def __init__(self):
         super().__init__()
