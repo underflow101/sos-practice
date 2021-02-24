@@ -47,7 +47,8 @@ footer</code></pre>
     See also: #456, #789</pre></code>
 
 ### Example
-<pre><code>feat: Add 'Go to SOS-Masters Homepage' Button
+```
+feat: Add 'Go to SOS-Masters Homepage' Button
 
 - Added 'Go to SOS-Masters Homepage' Button
     - This will link users to SOS-Masters Homepage URL
@@ -55,4 +56,5 @@ footer</code></pre>
 
 Resolves: #2
 
-Signed-off-by: underflow101 <ikarus125@gmail.com> </code></pre>
+Signed-off-by: underflow101 <ikarus125@gmail.com>
+```
