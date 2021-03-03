@@ -67,9 +67,6 @@ class SosMasterApp(QDialog):
         
         # Grid Layout: list out buttons
         grid = QGridLayout()
-        grid.addWidget(QLabel(self.tr("OS:")), 0, 0)
-        #grid.addWidget(self., 0, 1)
-        
         grid.addWidget(QLabel(self.tr("SOS Masters Github")), 2, 0)
         grid.addWidget(self.btnSosMastersGithub, 2, 1)
         grid.addWidget(QLabel(self.tr("SOS Masters")), 3, 0)

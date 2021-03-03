@@ -28,7 +28,7 @@ class sosTutorialApp(QWidget):
         
         # Button 0: Link to URL
         self.btnLink = QPushButton(self)
-        self.btnLink.setText('&Links')
+        self.btnLink.setText('&SOS Program Links')
         self.btnLink.setToolTip('Go to Links')
         self.btnLink.setMaximumHeight(btnHeight)
         self.btnLink.setMaximumWidth(btnWidth)
@@ -60,9 +60,10 @@ class sosTutorialApp(QWidget):
         
         # Grid Layout: list out buttons
         grid = QGridLayout()
-        grid.addWidget(QLabel(self.tr("OS:")), 0, 0)
-        grid.addWidget(self.runningOS, 0, 1)
-        grid.addWidget(QLabel(self.tr("Link to Pages")), 2, 0)
+        grid.addWidget(QLabel(self.tr("Hi~ Welcome!! Let's Join SOS Practice Project")), 0, 0)
+        grid.addWidget(QLabel(self.tr("Your Operating System is ")), 1, 0)
+        grid.addWidget(self.runningOS, 1, 1)
+        grid.addWidget(QLabel(self.tr("Reference")), 2, 0)
         grid.addWidget(self.btnLink, 2, 1)
         grid.addWidget(QLabel(self.tr("Basic Git Operations")), 3, 0)
         grid.addWidget(self.btnGitOp, 3, 1)
@@ -71,7 +72,7 @@ class sosTutorialApp(QWidget):
         grid.addWidget(QLabel(self.tr("프로그램을 종료합니다.")), 5, 0)
         grid.addWidget(btnQuit, 5, 1)
         
-        self.setWindowTitle("SOS Masters Practice")
+        self.setWindowTitle("SOS Practice for Master program & opensource contribution")
         self.setWindowIcon(QIcon('dice.png'))
         self.resize(self.config.mainUIWidth, self.config.mainUIHeight)
         self.center()
