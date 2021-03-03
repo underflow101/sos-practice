@@ -44,7 +44,17 @@ class gitOps:
     3. <b>$ git push</b><br>
     4. Put your Git ID and Password<br>
     5. Done!"""
-    
+   
+    gitRemoteMaster = """If you want to sync sos-practice master branch : <br><br> 
+    1. <b>$ git remote add upstream https://github.com/underflow101/sos-practice.git</b><br>
+    2. <b>$ git pull upstream master </b><br>
+    3. <b>$ git rebase upstream/master</b><br>
+    4. <b>$ git push origin master</b><br>
+        If something wrong!
+        git push -f origin master<br>
+
+    5. Done!"""
+
     def __init__(self):
         super().__init__()
 
@@ -71,7 +81,7 @@ class strings:
                   gitOp.gitCliMacOS,
                   gitOp.gitCliWindows],
                   gitOp.gitCmdAdd,
-                 'test2',
+                  gitOp.gitRemoteMaster,
                  'test3',
                  ]
     
