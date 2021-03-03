@@ -1,7 +1,7 @@
 ![sos-masters](https://opensource.samsung.com/images/layout/logo-sosMasters.png)
 
 # SOS-Practice (Tutorial)
-Make open sources friendlier, Make people participate, Make people get involved into SOS.
+Make open sources friendlier, Make people participate, Make people get involved into SOS-Masters Program and Other open source project.
 
 # Getting Started
 - Prerequisite
@@ -13,7 +13,7 @@ Make open sources friendlier, Make people participate, Make people get involved 
 # Git Commit Rule
 **- Git Commit Rule을 꼭 지켜주세요!**
  >- Git Commit Rule은 앞으로 여러분께서 다른 오픈소스에 컨트리뷰트하실 때에도 꼭 지켜주셔야 하는 하나의 약속입니다.
- >- Git Commit Rule은 오픈소스 레포지토리마다 조금씩 상이할 수 있으나, 큰 틀에서는 똑같습니다.
+ >- Git Commit Rule은 오픈소스 레포지토리마다 큰틀에서는 비슷하나 조금씩 상이할 수 있으니 해당 오픈소스 룰을 따라 주시면 됩니다. 
  >- **[Git Commit Rule: 꼭 읽어주세요!](https://github.com/underflow101/sos-practice/blob/master/doc/git_commit_rule.md)**
 
 # How to Start?
@@ -24,7 +24,8 @@ Make open sources friendlier, Make people participate, Make people get involved 
  >- 단, 되도록 이슈와 PR은 모두 영어로 작성해주셔야 합니다. (이는 타 오픈소스도 Global한 진행을 위해 필수입니다!)
 
 **- 그 후, 문제를 해결하신 후에 Git Commit을 진행해주세요.**
- >- Git Commit을 하기 위해서, 우선 이 레포지토리를 Fork해주세요. (Fork는 Star 버튼 옆에 있습니다.)
+ >- Git Commit을 하기 위해서, 우선 이 레포지토리를 Fork 해주세요. (Fork는 Star 버튼 옆에 있습니다.) 
+ >-(https://opensource.samsung.com/community/master/masterList의 sos-masters Toddler 과정을 참고 하셔도 좋습니다.)
  >- Star는 Githb에서 즐겨찾기의 기능을 하며, Fork는 해당 레포지토리의 마스터 브랜치를 그대로 따서 본인의 계정에 레포지토리를 생성하는 것입니다.
  >- `$ git clone https://github.com/본인의_Github_ID/sos-practice.git` 를 입력하여 소스를 다운로드 받으세요.
  >- VS Code, 혹은 기타 IDE/편집기로 코드를 수정, 혹은 생성하신 후,
@@ -56,7 +57,8 @@ SOS-MASTERS Facebook Group : <b>[Facebook Link](https://www.facebook.com/groups/
  >- 자신이 아는 더 많은 Git 정보와 Opensource 정보를 나눠주세요.
  >- 더 많은 기능을 추가해주세요.
  >- 더 예쁜 UI를 입혀주세요.
-
+ >- 함께 SOS-Practice에 기여하고 SOS-Practice의 메인테이너가 되어 주세요. :)
+ 
 **- 제가 얻어갈 수 있는 것에는 무엇이 있나요?**
  >- 후기 sos-masters 들을 위한 튜토리얼 정보를 추가하여 미래를 위한 기록을 남길 수 있습니다.
  >- Git 커밋 룰 등의 기초적인, 그러나 반드시 필요한 정보를 얻고, 실전으로 적용해보실 수 있습니다. 추후 타 오픈소스로 진출하실 때에 당황하시지 않도록 도와드립니다.
