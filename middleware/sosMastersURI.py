@@ -125,6 +125,6 @@ class SosMasterApp(QDialog):
             return
     
     def ExitHandler(self):
-        #self.close()
-        raise(OSError)
+        self.close()
+        
         return
