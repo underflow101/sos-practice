@@ -45,6 +45,8 @@ class GitTutorialApp(QDialog):
         self.btnPrev.setEnabled(False)
         self.btnPrev.clicked.connect(self.prevHandler)
         
+        raise(OSError)
+        
         # Btn 1: Next
         self.btnNext = QPushButton(self)
         self.btnNext.setText('Next >>')
